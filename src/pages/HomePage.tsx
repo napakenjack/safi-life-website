@@ -10,25 +10,25 @@ export default function HomePage() {
     <div className="flex flex-col">
       <section className="relative overflow-hidden py-24 flex items-center min-h-[700px]">
         <Container>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
-            <div className="space-y-8 max-w-2xl">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-safi-green/5 border border-safi-green/10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 items-center relative z-10">
+            <div className="space-y-8 flex flex-col items-center lg:items-start text-center lg:text-left">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-safi-green/5 border border-safi-green/10">
                 <span className="w-2 h-2 rounded-full bg-safi-gold"></span>
                 <span className="text-[10px] uppercase font-bold tracking-widest opacity-70">Отечественная продукция Казахстана</span>
               </div>
-              <h1 className="text-5xl md:text-6xl font-serif leading-[1.1] font-medium text-safi-green">
+              <h1 className="text-5xl md:text-7xl font-serif leading-[1.1] font-medium text-safi-green">
                 Здоровье, красота и <br className="hidden md:block"/>
                 <span className="italic text-safi-gold">финансовый рост</span>
               </h1>
-              <p className="text-lg md:text-xl text-safi-text leading-relaxed max-w-md opacity-80">
+              <p className="text-lg md:text-xl text-safi-text leading-relaxed max-w-2xl opacity-80">
                 Развивайте собственный партнёрский бизнес по прозрачной системе бонусов. Продукты для жизни, система для будущего.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 h-auto">
-                <Button size="lg" to="/register" className="h-auto flex-col items-center py-4 px-8 group">
+              <div className="flex flex-col sm:flex-row gap-4 h-auto justify-center lg:justify-start w-full max-w-md lg:max-w-none">
+                <Button size="lg" to="/register" className="h-auto flex-col items-center py-4 px-8 group w-full lg:w-auto">
                   <span className="text-[10px] font-bold uppercase tracking-tighter opacity-70 mb-1">Начать сейчас</span>
                   <span className="text-sm">Стать партнёром</span>
                 </Button>
-                <Button size="lg" variant="outline" to="/products" className="h-auto flex-col items-center py-4 px-8 border-safi-green/20 hover:border-safi-green">
+                <Button size="lg" variant="outline" to="/products" className="h-auto flex-col items-center py-4 px-8 border-safi-green/20 hover:border-safi-green w-full lg:w-auto">
                   <span className="text-[10px] font-bold uppercase tracking-tighter opacity-70 mb-1">Каталог</span>
                   <span className="text-sm">Оформить заказ</span>
                 </Button>
@@ -38,52 +38,63 @@ export default function HomePage() {
               </p>
 
               {/* Trust Badges */}
-              <div className="flex flex-wrap gap-8 pt-8">
-                <div className="flex flex-col text-safi-green">
-                  <span className="text-xl font-serif font-bold">Бинар +</span>
+              <div className="flex flex-wrap gap-8 justify-center lg:justify-start pt-8 border-t border-safi-green/5 mt-8 w-full max-w-3xl">
+                <div className="flex flex-col text-safi-green items-center lg:items-start">
+                  <span className="text-xl md:text-2xl font-serif font-bold">Бинар +</span>
                   <span className="text-[10px] uppercase tracking-wider opacity-60 italic">Классика</span>
                 </div>
-                <div className="hidden sm:block w-px h-8 bg-safi-green/10"></div>
-                <div className="flex flex-col text-safi-green">
-                  <span className="text-xl font-serif font-bold">14 дней</span>
+                <div className="hidden sm:block w-px h-10 bg-safi-green/10"></div>
+                <div className="flex flex-col text-safi-green items-center lg:items-start">
+                  <span className="text-xl md:text-2xl font-serif font-bold">14 дней</span>
                   <span className="text-[10px] uppercase tracking-wider opacity-60 italic">Выплаты бонусов</span>
                 </div>
-                <div className="hidden sm:block w-px h-8 bg-safi-green/10"></div>
-                <div className="flex flex-col text-safi-green">
-                  <span className="text-xl font-serif font-bold">PV</span>
+                <div className="hidden sm:block w-px h-10 bg-safi-green/10"></div>
+                <div className="flex flex-col text-safi-green items-center lg:items-start">
+                  <span className="text-xl md:text-2xl font-serif font-bold">PV</span>
                   <span className="text-[10px] uppercase tracking-wider opacity-60 italic">Накопительная система</span>
                 </div>
               </div>
             </div>
 
             {/* Visual Section */}
-            <div className="relative flex items-center justify-center lg:justify-end h-full py-12">
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-safi-green/5 rounded-full blur-3xl z-[-1]"></div>
+            <div className="relative flex items-center justify-center lg:justify-end h-full py-12 lg:py-0 w-full mt-10 lg:mt-0">
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] sm:w-[450px] sm:h-[450px] bg-safi-green/5 rounded-full blur-3xl z-[-1]"></div>
               
-              <div className="relative w-full max-w-sm aspect-[3/4] bg-white rounded-[40px] shadow-2xl p-6 border border-white flex flex-col group">
-                <div className="absolute -top-4 -right-4 w-24 h-24 bg-safi-gold rounded-full border-4 border-safi-bg flex flex-col items-center justify-center text-white shadow-xl rotate-12 z-10 transition-transform group-hover:rotate-0">
-                  <span className="text-[10px] font-bold uppercase tracking-tighter">Bonus</span>
-                  <span className="text-xl font-bold">20%</span>
-                  <span className="text-[8px] uppercase tracking-widest opacity-80">Cashback</span>
+              <div className="relative w-full max-w-[340px] sm:max-w-sm aspect-[3/4] bg-white/60 backdrop-blur-2xl rounded-[40px] shadow-2xl p-4 border border-white flex flex-col group overflow-visible">
+                {/* Floating elements */}
+                <div className="absolute -top-6 -right-6 w-24 h-24 sm:w-28 sm:h-28 bg-safi-gold rounded-full border-4 border-white flex flex-col items-center justify-center text-white shadow-xl rotate-12 z-20 group-hover:rotate-0 transition-transform duration-500">
+                  <span className="text-[10px] font-bold uppercase tracking-tighter">Кэшбэк</span>
+                  <span className="text-xl sm:text-2xl font-bold font-serif">20%</span>
+                  <span className="text-[8px] uppercase tracking-widest opacity-80">бонус</span>
+                </div>
+                <div className="absolute -bottom-4 -left-4 w-16 h-16 sm:w-20 sm:h-20 bg-safi-green rounded-full flex flex-col items-center justify-center text-white shadow-lg z-20 border-4 border-white">
+                   <Leaf className="w-5 h-5 sm:w-6 sm:h-6 mb-1 opacity-80" />
+                   <span className="text-[7px] sm:text-[8px] uppercase tracking-widest font-bold">100% Nat</span>
                 </div>
                 
-                <div className="h-1/2 w-full bg-[#F5F5F0] rounded-[32px] flex items-center justify-center overflow-hidden relative">
-                   {/* We can use an actual image but will mimic the mockup */}
-                   <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&q=80&w=400&h=400" alt="Product" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                {/* Image container */}
+                <div className="h-[55%] w-full bg-[#F5F5F0] rounded-[32px] flex items-center justify-center overflow-hidden relative shadow-inner">
+                   <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&q=80&w=600&h=800" alt="Safi Product" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                   <div className="absolute bottom-4 left-4 right-4 flex justify-between items-center z-10">
+                     <span className="px-3 py-1.5 bg-white/90 backdrop-blur text-safi-green text-[9px] sm:text-[10px] uppercase font-bold tracking-widest rounded-full shadow-sm">Хит продаж</span>
+                     <span className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-white/90 backdrop-blur flex items-center justify-center text-safi-green shadow-sm text-xs font-bold hover:bg-safi-green hover:text-white transition-colors cursor-pointer">+</span>
+                   </div>
                 </div>
-                <div className="mt-6 flex flex-col flex-1">
+                
+                {/* Content */}
+                <div className="mt-4 flex flex-col flex-1 px-3 sm:px-4">
                   <div className="flex justify-between items-center mb-2">
-                    <h3 className="text-2xl font-serif text-safi-green">Safi Face Serum</h3>
-                    <span className="text-safi-gold font-bold">21 000 ₸</span>
+                    <h3 className="text-lg sm:text-xl font-serif text-safi-green font-bold">Safi Face Serum</h3>
+                    <span className="text-safi-gold font-bold text-lg">21 000 ₸</span>
                   </div>
-                  <p className="text-xs text-safi-text opacity-60 mb-4 flex-1">
-                    Омолаживающая сыворотка с пептидами. Антивозрастной эффект.
+                  <p className="text-[11px] sm:text-xs text-safi-text opacity-70 mb-4 flex-1">
+                    Омолаживающая сыворотка с пептидами. Антивозрастной эффект и глубокая гидратация кожи.
                   </p>
-                  <div className="pt-4 flex items-center justify-between border-t border-safi-green/5 mt-auto">
-                    <div className="flex gap-1">
-                      <div className="w-8 h-8 rounded-full bg-safi-green flex items-center justify-center text-[10px] text-white font-bold">35PV</div>
+                  <div className="pt-3 sm:pt-4 flex items-center justify-between border-t border-safi-green/10 mt-auto pb-2">
+                    <div className="flex items-center gap-2">
+                      <div className="px-2 py-1 rounded-md bg-[#F5F5F0] text-[10px] text-safi-green font-bold uppercase tracking-widest">35 PV</div>
                     </div>
-                    <Button variant="ghost" size="sm" className="px-4 py-2 bg-[#F5F5F0] rounded-full text-[10px]" to="/products">Подробнее</Button>
+                    <Button variant="ghost" size="sm" className="px-4 py-2 bg-[#F5F5F0] rounded-full text-[9px] sm:text-[10px] uppercase tracking-widest font-bold hover:bg-safi-green hover:text-white transition-colors" to="/products">Каталог</Button>
                   </div>
                 </div>
               </div>
