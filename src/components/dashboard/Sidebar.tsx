@@ -62,8 +62,12 @@ export function Sidebar({ isOpen, onClose }: { isOpen: boolean; onClose: () => v
           })}
         </div>
 
-        <div className="p-4 border-t border-safi-green/5 shrink-0">
-          <button className="flex w-full items-center gap-3 px-4 py-3 rounded-xl transition-all duration-200 text-sm font-bold uppercase tracking-wider text-red-500/70 hover:bg-red-50 hover:text-red-600">
+        <div className="p-4 border-t border-safi-green/5 shrink-0 flex flex-col gap-2">
+          {/* Admin Link (Temporary for prototype) */}
+          <Link to="/admin" className="flex w-full items-center gap-3 px-4 py-3 rounded-xl transition-all duration-200 text-sm font-bold uppercase tracking-wider text-safi-gold bg-safi-green hover:bg-safi-green/90 shadow-md">
+             Админ-панель
+          </Link>
+          <button className="flex w-full items-center gap-3 px-4 py-3 rounded-xl transition-all duration-200 text-sm font-bold uppercase tracking-wider text-red-500/70 hover:bg-red-50 hover:text-red-600 border border-transparent hover:border-red-500/10">
             <LogOut className="w-5 h-5 opacity-60" />
             Выйти
           </button>

@@ -26,6 +26,22 @@ const PackageStatus = React.lazy(() => import('../pages/dashboard/PackageStatus'
 const Profile = React.lazy(() => import('../pages/dashboard/Profile'));
 const Support = React.lazy(() => import('../pages/dashboard/Support'));
 
+// Admin Pages
+const AdminOverview = React.lazy(() => import('../pages/admin/AdminOverview'));
+const AdminPartners = React.lazy(() => import('../pages/admin/AdminPartners'));
+const AdminPartnerDetail = React.lazy(() => import('../pages/admin/AdminPartnerDetail'));
+const AdminStructure = React.lazy(() => import('../pages/admin/AdminStructure'));
+const AdminTransactions = React.lazy(() => import('../pages/admin/AdminTransactions'));
+const AdminWithdrawals = React.lazy(() => import('../pages/admin/AdminWithdrawals'));
+const AdminBonuses = React.lazy(() => import('../pages/admin/AdminBonuses'));
+const AdminPackages = React.lazy(() => import('../pages/admin/AdminPackages'));
+const AdminStatuses = React.lazy(() => import('../pages/admin/AdminStatuses'));
+const AdminProducts = React.lazy(() => import('../pages/admin/AdminProducts'));
+const AdminSupport = React.lazy(() => import('../pages/admin/AdminSupport'));
+const AdminReports = React.lazy(() => import('../pages/admin/AdminReports'));
+const AdminSettings = React.lazy(() => import('../pages/admin/AdminSettings'));
+const AdminLayoutComponent = React.lazy(() => import('../components/admin/AdminLayout').then(module => ({ default: module.AdminLayout })));
+
 export function AppRouter() {
   return (
     <HashRouter>
@@ -54,6 +70,23 @@ export function AppRouter() {
             <Route path="package-status" element={<PackageStatus />} />
             <Route path="profile" element={<Profile />} />
             <Route path="support" element={<Support />} />
+          </Route>
+
+          {/* Admin Routes */}
+          <Route path="/admin" element={<AdminLayoutComponent />}>
+            <Route index element={<AdminOverview />} />
+            <Route path="partners" element={<AdminPartners />} />
+            <Route path="partners/:id" element={<AdminPartnerDetail />} />
+            <Route path="structure" element={<AdminStructure />} />
+            <Route path="transactions" element={<AdminTransactions />} />
+            <Route path="withdrawals" element={<AdminWithdrawals />} />
+            <Route path="bonuses" element={<AdminBonuses />} />
+            <Route path="packages" element={<AdminPackages />} />
+            <Route path="statuses" element={<AdminStatuses />} />
+            <Route path="products" element={<AdminProducts />} />
+            <Route path="support" element={<AdminSupport />} />
+            <Route path="reports" element={<AdminReports />} />
+            <Route path="settings" element={<AdminSettings />} />
           </Route>
 
           <Route path="/admin-preview" element={<AdminPreviewPage />} />

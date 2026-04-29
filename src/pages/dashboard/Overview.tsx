@@ -2,6 +2,7 @@ import { user, balance, structure, transactions } from '../../data/dashboardMock
 import { StatCard, ProgressBar, Badge } from '../../components/dashboard/ui';
 import { Copy, Plus, ArrowUpRight, ArrowUpCircle, HelpCircle, Users, Activity, ExternalLink } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { cn } from '../../lib/utils';
 
 export default function Overview() {
   const nextStatusPV = 5000;
