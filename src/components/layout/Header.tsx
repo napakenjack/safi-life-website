@@ -26,19 +26,22 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b border-safi-green/10 bg-white/50 backdrop-blur-md shrink-0">
       <Container>
         <div className="flex h-20 items-center justify-between">
-          <Link to="/" className="flex items-center gap-2" onClick={closeMenu}>
-            {/* Вставьте ваш <img> логотип сюда. Пример:  */}
-            <div className="w-10 h-10 bg-safi-green rounded-xl flex items-center justify-center text-safi-gold font-bold text-xl shrink-0"><img src="https://napaxiong.wordpress.com/wp-content/uploads/2026/04/safi-life.png" alt="Safi Life" className="h-10 w-auto object-contain" /></div>
+          <Link to="/" className="flex items-center" onClick={closeMenu}>
+            <img 
+              alt="Safi Life" 
+              className="w-[100px] h-[60px] object-contain shrink-0" 
+              src="https://napaxiong.wordpress.com/wp-content/uploads/2026/04/safi-life.png" 
+            />
           </Link>
 
           {/* Desktop Nav */}
-          <nav className="hidden lg:flex items-center gap-4 xl:gap-5 overflow-visible">
+          <nav className="hidden lg:flex items-center xl:gap-8 gap-5 overflow-visible flex-1 justify-center px-4">
             {navLinks.map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
                 className={cn(
-                  'text-[10px] xl:text-xs font-bold uppercase tracking-widest transition-colors hover:text-safi-gold whitespace-nowrap',
+                  'text-[10px] xl:text-xs font-bold uppercase tracking-[0.15em] transition-colors hover:text-safi-gold whitespace-nowrap',
                   location.pathname === link.path ? 'text-safi-gold border-b border-safi-gold' : 'text-safi-green opacity-80'
                 )}
               >
@@ -47,9 +50,9 @@ export function Header() {
             ))}
           </nav>
 
-          <div className="hidden lg:flex items-center gap-3">
-            <Button variant="outline" size="sm" to="/login" className="px-4">Вход</Button>
-            <Button size="sm" to="/register" className="px-4 whitespace-nowrap">Регистрация</Button>
+          <div className="hidden lg:flex items-center gap-3 shrink-0">
+            <Button variant="outline" size="sm" to="/login" className="px-5">Вход</Button>
+            <Button size="sm" to="/register" className="px-5">Регистрация</Button>
           </div>
 
           {/* Mobile menu button */}

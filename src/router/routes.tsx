@@ -1,6 +1,7 @@
 import React from 'react';
-import { HashRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { MainLayout } from '../components/layout/MainLayout';
+import { DashboardLayout } from '../components/dashboard/DashboardLayout';
 
 // Mock pages for now
 const HomePage = React.lazy(() => import('../pages/HomePage'));
@@ -13,9 +14,17 @@ const ContactsPage = React.lazy(() => import('../pages/ContactsPage'));
 const FAQPage = React.lazy(() => import('../pages/FAQPage'));
 const RegisterPage = React.lazy(() => import('../pages/RegisterPage'));
 const LoginPage = React.lazy(() => import('../pages/LoginPage'));
-const DashboardPage = React.lazy(() => import('../pages/DashboardPage'));
 const AdminPreviewPage = React.lazy(() => import('../pages/AdminPreviewPage'));
 const LegalPage = React.lazy(() => import('../pages/LegalPage'));
+
+// Dashboard Pages
+const Overview = React.lazy(() => import('../pages/dashboard/Overview'));
+const Structure = React.lazy(() => import('../pages/dashboard/Structure'));
+const Transactions = React.lazy(() => import('../pages/dashboard/Transactions'));
+const Bonuses = React.lazy(() => import('../pages/dashboard/Bonuses'));
+const PackageStatus = React.lazy(() => import('../pages/dashboard/PackageStatus'));
+const Profile = React.lazy(() => import('../pages/dashboard/Profile'));
+const Support = React.lazy(() => import('../pages/dashboard/Support'));
 
 export function AppRouter() {
   return (
@@ -36,9 +45,21 @@ export function AppRouter() {
             <Route path="legal" element={<LegalPage />} />
           </Route>
           
-          {/* Dashboard/Admin typically don't have the standard header/footer */}
-          <Route path="/dashboard" element={<DashboardPage />} />
+          {/* Dashboard Routes */}
+          <Route path="/dashboard" element={<DashboardLayout />}>
+            <Route index element={<Overview />} />
+            <Route path="structure" element={<Structure />} />
+            <Route path="transactions" element={<Transactions />} />
+            <Route path="bonuses" element={<Bonuses />} />
+            <Route path="package-status" element={<PackageStatus />} />
+            <Route path="profile" element={<Profile />} />
+            <Route path="support" element={<Support />} />
+          </Route>
+
           <Route path="/admin-preview" element={<AdminPreviewPage />} />
+          
+          {/* Catch all */}
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </React.Suspense>
     </HashRouter>

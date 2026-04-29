@@ -10,9 +10,12 @@ export function Footer() {
       <Container>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           <div>
-            <Link to="/" className="flex items-center gap-2 mb-6">
-              <div className="w-10 h-10 bg-white/10 rounded-xl flex items-center justify-center text-safi-gold font-bold text-xl backdrop-blur-sm border border-white/10">S</div>
-              <span className="text-2xl font-serif font-bold text-white tracking-tight">Safi Life</span>
+            <Link to="/" className="flex items-center mb-6">
+              <img 
+                alt="Safi Life" 
+                className="w-[120px] h-auto object-contain brightness-0 invert opacity-90 hover:opacity-100 transition-opacity" 
+                src="https://napaxiong.wordpress.com/wp-content/uploads/2026/04/safi-life.png" 
+              />
             </Link>
             <p className="text-sm text-safi-bg/70 mb-6 max-w-xs leading-relaxed">
               Натуральная продукция из Казахстана для здоровья и красоты. Ваш надежный партнер в развитии бизнеса.
