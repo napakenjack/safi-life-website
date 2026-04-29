@@ -37,7 +37,7 @@ export const products: Product[] = [
     usage: '1 мерную ложку порошка развести в стакане воды. Принимать утром натощак.',
     price: 18000,
     pv: 30,
-    image: 'https://images.unsplash.com/photo-1629363447953-294b41a7cbe5?auto=format&fit=crop&q=80&w=400&h=400'
+    image: 'https://images.unsplash.com/photo-1627467959081-97831c0d645f?q=80&w=1383&auto=format&fit=crop'
   },
   {
     id: '3',
