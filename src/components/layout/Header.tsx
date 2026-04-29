@@ -27,9 +27,8 @@ export function Header() {
       <Container>
         <div className="flex h-20 items-center justify-between">
           <Link to="/" className="flex items-center gap-2" onClick={closeMenu}>
-            {/* Вставьте ваш <img> логотип сюда. Пример: <img src="/logo.png" alt="Safi Life" className="h-10 w-auto object-contain" /> */}
-            <div className="w-10 h-10 bg-safi-green rounded-xl flex items-center justify-center text-safi-gold font-bold text-xl shrink-0">S</div>
-            <span className="text-2xl font-serif font-bold tracking-tight text-safi-green shrink-0">Safi Life</span>
+            {/* Вставьте ваш <img> логотип сюда. Пример:  */}
+            <div className="w-10 h-10 bg-safi-green rounded-xl flex items-center justify-center text-safi-gold font-bold text-xl shrink-0"><img src="https://napaxiong.wordpress.com/wp-content/uploads/2026/04/safi-life.png" alt="Safi Life" className="h-10 w-auto object-contain" /></div>
           </Link>
 
           {/* Desktop Nav */}
