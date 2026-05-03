@@ -17,10 +17,10 @@ export function StatCard({
   return (
     <div className={cn("bg-white p-6 rounded-3xl shadow-sm border border-safi-green/60 relative overflow-hidden group hover:-translate-y-1 transition-transform duration-300", className)}>
       <div className="flex justify-between items-start mb-4 relative z-10">
-        <div className="text-[10px] uppercase font-bold text-safi-text/100 tracking-widest">{title}</div>
-        {icon && <div className="text-safi-green/100 group-hover:text-safi-gold transition-colors">{icon}</div>}
+        <div className="text-[10px] uppercase font-bold text-safi-text/200 tracking-widest">{title}</div>
+        {icon && <div className="text-safi-green/200 group-hover:text-safi-gold transition-colors">{icon}</div>}
       </div>
-      <div className="text-2xl md:text-3xl font-serif font-bold text-safi-green relative z-10">{value}</div>
+      <div className="text-2xl md:text-3xl font-serif font-bold text-safi-white relative z-10">{value}</div>
       {trend && (
         <div className={cn("text-xs font-bold mt-2 relative z-10", trend.isPositive ? "text-green-500" : "text-red-500")}>
           {trend.isPositive ? '+' : ''}{trend.value}
