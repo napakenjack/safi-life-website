@@ -18,7 +18,7 @@ export function StatCard({
     <div className={cn("bg-white p-6 rounded-3xl shadow-sm border border-safi-green/5 relative overflow-hidden group hover:-translate-y-1 transition-transform duration-300", className)}>
       <div className="flex justify-between items-start mb-4 relative z-10">
         <div className="text-[10px] uppercase font-bold text-safi-text/60 tracking-widest">{title}</div>
-        {icon && <div className="text-safi-green/40 group-hover:text-safi-gold transition-colors">{icon}</div>}
+        {icon && <div className="text-safi-white/100 group-hover:text-safi-white/100 transition-colors">{icon}</div>}
       </div>
       <div className="text-2xl md:text-3xl font-serif font-bold text-safi-green relative z-10">{value}</div>
       {trend && (
