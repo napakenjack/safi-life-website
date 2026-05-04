@@ -3,7 +3,6 @@ import { Package } from 'lucide-react';
 
 export default function AdminPackages() {
   const packages = [
-    { name: 'START', price: '30 000 ₸', ref: '5%', bin: '—', count: 450, status: 'Активен' },
     { name: 'BUSINESS', price: '60 000 ₸', ref: '10%', bin: '7%', count: 520, status: 'Активен' },
     { name: 'VIP', price: '180 000 ₸', ref: '10%', bin: '8%', count: 280, status: 'Активен' },
     { name: 'ELITE', price: '300 000 ₸', ref: '10%', bin: '10%', count: 150, status: 'Активен' },
@@ -18,7 +17,7 @@ export default function AdminPackages() {
         </div>
       </div>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="grid md:grid-cols-3 gap-6 max-w-5xl">
          {packages.map((pkg, i) => (
            <div key={i} className="bg-white rounded-[32px] border border-safi-green/5 shadow-sm p-6 relative overflow-hidden group">
              <div className="mb-4">

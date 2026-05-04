@@ -71,14 +71,14 @@ export default function AdminStructure() {
                    <div className="flex gap-8 relative mt-8">
                      <div className="absolute -top-8 left-1/4 right-1/4 h-8 border-t-2 border-l-2 border-r-2 border-safi-green/20 rounded-t-xl" />
                      <TreeNode name="Кайрат Исаев" id="SAFI-10003" pkg="BUSINESS" pv={250} />
-                     <TreeNode name="Empty" id="-" pkg="START" pv={0} empty />
+                     <TreeNode name="Empty" id="-" pkg="BUSINESS" pv={0} empty />
                    </div>
                  </div>
 
                  {/* Right Branch */}
                  <div className="flex flex-col items-center gap-8 relative">
                    <div className="absolute -top-4 w-12 text-center text-[10px] font-bold text-safi-text/40 bg-white left-1/2 -ml-6">Правая</div>
-                   <TreeNode name="Асель Муканова" id="SAFI-10002" pkg="START" pv={50} />
+                   <TreeNode name="Асель Муканова" id="SAFI-10002" pkg="BUSINESS" pv={50} />
                    
                    <div className="flex gap-8 relative mt-8">
                      <div className="absolute -top-8 left-1/4 right-1/4 h-8 border-t-2 border-l-2 border-r-2 border-safi-green/20 rounded-t-xl" />
@@ -118,7 +118,7 @@ function TreeNode({ name, id, pkg, pv, isRoot, empty }: { name: string, id: stri
     )}>
        <div className={cn(
          "w-12 h-12 rounded-full flex items-center justify-center text-lg font-serif text-white font-bold mb-3",
-         pkg === 'START' ? "bg-gray-400" : pkg === 'BUSINESS' ? "bg-blue-400" : pkg === 'VIP' ? "bg-purple-500" : "bg-safi-gold"
+         pkg === 'BUSINESS' ? "bg-blue-400" : pkg === 'VIP' ? "bg-purple-500" : "bg-safi-gold"
        )}>
          {name.charAt(0)}
        </div>

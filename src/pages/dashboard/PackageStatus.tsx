@@ -5,7 +5,6 @@ import { cn } from '../../lib/utils';
 
 export default function PackageStatus() {
   const packages = [
-    { name: "START", price: "30 000 ₸", ref: "5%", bin: "—", current: user.package === "START" },
     { name: "BUSINESS", price: "60 000 ₸", ref: "10%", bin: "7%", current: user.package === "BUSINESS" },
     { name: "VIP", price: "180 000 ₸", ref: "10%", bin: "8%", current: user.package === "VIP" },
     { name: "ELITE", price: "300 000 ₸", ref: "10%", bin: "10%", current: user.package === "ELITE" }
@@ -30,7 +29,7 @@ export default function PackageStatus() {
           <p className="text-sm text-safi-text/70">Управление пакетами и повышение статуса</p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid md:grid-cols-3 gap-6">
           {packages.map((pkg, i) => (
             <div 
               key={i} 

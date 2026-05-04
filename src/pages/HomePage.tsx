@@ -231,7 +231,7 @@ export default function HomePage() {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {packages.map((pkg) => (
               <div key={pkg.id} className={`rounded-3xl p-8 border hover:-translate-y-2 transition-transform duration-500 flex flex-col ${pkg.isPopular ? 'bg-safi-green text-white shadow-2xl relative border-safi-green' : 'bg-white border-safi-green/5'}`}>
                 {pkg.isPopular && (

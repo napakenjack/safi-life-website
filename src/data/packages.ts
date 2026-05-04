@@ -10,20 +10,6 @@ export interface Package {
 
 export const packages: Package[] = [
   {
-    id: 'start',
-    name: 'START',
-    price: 30000,
-    referralBonus: 5,
-    binaryBonus: null,
-    features: [
-      'Доступ ко всем продуктам',
-      'Личный кабинет',
-      'Реферальная ссылка',
-      'Обучающие материалы',
-      'Кэшбэк 20%',
-    ],
-  },
-  {
     id: 'business',
     name: 'BUSINESS',
     price: 60000,

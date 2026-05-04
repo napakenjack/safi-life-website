@@ -43,21 +43,21 @@ export const transactions = [
   { id: "TRX-107", date: "14.04.2026 09:30", type: "Вывод средств", amount: "-200 000 тг", status: "Выплачено", source: "Счёт ИП", comment: "Заявка #W-42" },
   { id: "TRX-108", date: "12.04.2026 18:15", type: "Бинарный бонус", amount: "+32 000 тг", status: "Начислено", source: "Правая ветка", comment: "8% от 400 PV" },
   { id: "TRX-109", date: "10.04.2026 12:00", type: "Депозит 10%", amount: "+3 200 тг", status: "Начислено", source: "Бинарный бонус", comment: "Накопительный счет" },
-  { id: "TRX-110", date: "05.04.2026 15:45", type: "Реферальный бонус", amount: "+3 000 тг", status: "Начислено", source: "Партнёр: Серик", comment: "5% от пакета START" },
+  { id: "TRX-110", date: "05.04.2026 15:45", type: "Реферальный бонус", amount: "+3 000 тг", status: "Начислено", source: "Партнёр: Серик", comment: "5% от пакета BUSINESS" },
 ];
 
 export const partners = [
   { name: "Ерлан Сыздыков", id: "SAFI-10555", line: 1, branch: "Левая", package: "VIP", status: "Менеджер", personalPV: 200, teamPV: 4500, registrationDate: "18.04.2026", activity: "Активен" },
   { name: "Алиса Петрова", id: "SAFI-10556", line: 1, branch: "Правая", package: "BUSINESS", status: "-", personalPV: 50, teamPV: 1200, registrationDate: "17.04.2026", activity: "Активен" },
-  { name: "Марат Оспанов", id: "SAFI-10612", line: 2, branch: "Левая", package: "START", status: "-", personalPV: 25, teamPV: 300, registrationDate: "20.04.2026", activity: "Неактивен" },
+  { name: "Марат Оспанов", id: "SAFI-10612", line: 2, branch: "Левая", package: "BUSINESS", status: "-", personalPV: 25, teamPV: 300, registrationDate: "20.04.2026", activity: "Неактивен" },
   { name: "Гульнара Касенова", id: "SAFI-10650", line: 1, branch: "Правая", package: "ELITE", status: "Лидер", personalPV: 500, teamPV: 18000, registrationDate: "10.03.2026", activity: "Активен" },
   { name: "Алексей Смирнов", id: "SAFI-10688", line: 3, branch: "Левая", package: "BUSINESS", status: "Менеджер", personalPV: 100, teamPV: 2500, registrationDate: "05.04.2026", activity: "Активен" },
   { name: "Динара Туленова", id: "SAFI-10700", line: 2, branch: "Правая", package: "VIP", status: "-", personalPV: 150, teamPV: 500, registrationDate: "14.04.2026", activity: "Активен" },
-  { name: "Нурлан Саматов", id: "SAFI-10705", line: 1, branch: "Левая", package: "START", status: "-", personalPV: 0, teamPV: 0, registrationDate: "22.04.2026", activity: "Неактивен" },
+  { name: "Нурлан Саматов", id: "SAFI-10705", line: 1, branch: "Левая", package: "BUSINESS", status: "-", personalPV: 0, teamPV: 0, registrationDate: "22.04.2026", activity: "Неактивен" },
   { name: "Елена Волкова", id: "SAFI-10740", line: 2, branch: "Правая", package: "BUSINESS", status: "Менеджер", personalPV: 100, teamPV: 1500, registrationDate: "02.03.2026", activity: "Активен" },
   { name: "Кайрат Исаев", id: "SAFI-10811", line: 3, branch: "Левая", package: "VIP", status: "Лидер", personalPV: 300, teamPV: 11000, registrationDate: "15.02.2026", activity: "Активен" },
   { name: "Асель Муканова", id: "SAFI-10833", line: 1, branch: "Правая", package: "ELITE", status: "Директор", personalPV: 1000, teamPV: 55000, registrationDate: "10.01.2026", activity: "Активен" },
-  { name: "Игорь Новиков", id: "SAFI-10890", line: 4, branch: "Левая", package: "START", status: "-", personalPV: 20, teamPV: 100, registrationDate: "24.04.2026", activity: "Активен" },
+  { name: "Игорь Новиков", id: "SAFI-10890", line: 4, branch: "Левая", package: "BUSINESS", status: "-", personalPV: 20, teamPV: 100, registrationDate: "24.04.2026", activity: "Активен" },
   { name: "Санжар Болатов", id: "SAFI-10901", line: 2, branch: "Правая", package: "BUSINESS", status: "-", personalPV: 50, teamPV: 450, registrationDate: "20.03.2026", activity: "Неактивен" }
 ];
 
