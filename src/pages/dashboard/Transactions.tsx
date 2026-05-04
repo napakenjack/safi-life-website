@@ -15,7 +15,7 @@ export default function Transactions() {
         <StatCard 
           title="Общий заработок" 
           value={`${balance.totalEarned.toLocaleString('ru-RU')} ₸`} 
-          className="bg-safi-gold text-white"
+          variant="dark"
         />
         <StatCard 
           title="Доступно к выводу" 

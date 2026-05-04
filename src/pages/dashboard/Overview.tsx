@@ -31,7 +31,8 @@ export default function Overview() {
           title="Доступно к выводу" 
           value={`${balance.available.toLocaleString('ru-RU')} ₸`} 
           icon={<ArrowUpRight className="w-5 h-5" />}
-          className="bg-safi-gold text-white border-none shadow-lg"
+          variant="primary"
+          className="shadow-lg"
         />
         <StatCard 
           title="Общий заработок" 

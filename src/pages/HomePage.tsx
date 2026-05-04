@@ -108,16 +108,23 @@ export default function HomePage() {
       {/* Mini News Feed */}
       <section className="py-6 bg-white border-b border-safi-green/5">
         <Container>
-          <div className="flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-8">
-             <div className="shrink-0 flex items-center gap-2 text-safi-gold">
-               <span className="w-2 h-2 rounded-full bg-safi-gold animate-pulse"></span>
-               <span className="text-[10px] font-bold uppercase tracking-widest text-safi-green">Новости</span>
+          <div className="flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-8 overflow-hidden">
+             <div className="shrink-0 flex items-center justify-between w-full md:w-auto">
+               <div className="flex items-center gap-2 text-safi-gold">
+                 <span className="w-2 h-2 rounded-full bg-safi-gold animate-pulse"></span>
+                 <span className="text-[10px] font-bold uppercase tracking-widest text-safi-green">Новости</span>
+               </div>
+               <div className="md:hidden">
+                 <Link to="/news" className="text-[10px] uppercase tracking-widest font-bold text-safi-gold hover:text-safi-green transition-colors flex items-center gap-1">
+                   Все <ArrowRight className="w-3 h-3" />
+                 </Link>
+               </div>
              </div>
              
-             <div className="flex-1 overflow-hidden">
-                <div className="flex gap-6 overflow-x-auto pb-2 -mb-2 scrollbar-none snap-x">
+             <div className="flex-1 w-full min-w-0">
+                <div className="flex gap-4 overflow-x-auto pb-4 -mb-4 scrollbar-none snap-x snap-mandatory hide-scrollbar">
                    {newsArticles.slice(0, 3).map(article => (
-                     <Link to="/news" key={article.id} className="shrink-0 snap-start bg-[#F5F5F0] border border-safi-green/5 rounded-xl p-4 w-[280px] hover:bg-safi-green/5 transition-colors cursor-pointer flex flex-col justify-between group">
+                     <Link to="/news" key={article.id} className="shrink-0 snap-center md:snap-start bg-[#F5F5F0] border border-safi-green/5 rounded-xl p-4 w-[85vw] md:w-[280px] hover:bg-safi-green/5 transition-colors cursor-pointer flex flex-col justify-between group">
                        <div className="text-[10px] text-safi-text/50 mb-2 font-mono flex items-center justify-between">
                          <span className="bg-white px-2 py-0.5 rounded-full text-safi-green font-bold">{article.category}</span>
                          <span>{article.date}</span>
@@ -127,7 +134,7 @@ export default function HomePage() {
                    ))}
                 </div>
              </div>
-             <div className="shrink-0">
+             <div className="shrink-0 hidden md:block">
                <Link to="/news" className="text-xs uppercase tracking-widest font-bold text-safi-gold hover:text-safi-green transition-colors flex items-center gap-1">
                  Смотреть всё <ArrowRight className="w-3 h-3" />
                </Link>
@@ -244,7 +251,7 @@ export default function HomePage() {
                       Бинарный бонус: {pkg.binaryBonus ? `${pkg.binaryBonus}%` : 'Нет'}
                     </span>
                   </li>
-                  {pkg.features.slice(1).map((feature, i) => (
+                  {pkg.features.map((feature, i) => (
                     <li key={i} className={`flex items-start gap-3 text-sm ${pkg.isPopular ? 'opacity-80' : 'text-safi-text text-opacity-70'}`}>
                        <div className="mt-1.5 rounded-full bg-current shrink-0 w-1.5 h-1.5 opacity-40"></div>
                       <span>{feature}</span>

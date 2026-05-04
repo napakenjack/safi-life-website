@@ -6,23 +6,46 @@ export function StatCard({
   value, 
   icon, 
   trend,
-  className 
+  className,
+  variant = 'default'
 }: { 
   title: string; 
   value: ReactNode; 
   icon?: ReactNode; 
   trend?: { value: string, isPositive: boolean };
   className?: string;
+  variant?: 'default' | 'primary' | 'dark' | 'gold';
 }) {
+  const bgColors = {
+    default: 'bg-white border-safi-green/5',
+    primary: 'bg-safi-green text-white border-none',
+    dark: 'bg-[#1A1A1A] text-white border-none',
+    gold: 'bg-safi-gold text-white border-none'
+  };
+
+  const titleColors = {
+    default: 'text-safi-text/60',
+    primary: 'text-white/70',
+    dark: 'text-white/70',
+    gold: 'text-white/80'
+  };
+
+  const valueColors = {
+    default: 'text-safi-green',
+    primary: 'text-white',
+    dark: 'text-white',
+    gold: 'text-white'
+  };
+
   return (
-    <div className={cn("bg-white p-6 rounded-3xl shadow-sm border border-safi-green/5 relative overflow-hidden group hover:-translate-y-1 transition-transform duration-300", className)}>
+    <div className={cn("p-6 rounded-3xl shadow-sm border relative overflow-hidden group hover:-translate-y-1 transition-transform duration-300", bgColors[variant], className)}>
       <div className="flex justify-between items-start mb-4 relative z-10">
-        <div className="text-[10px] uppercase font-bold text-safi-text/60 tracking-widest">{title}</div>
-        {icon && <div className="text-safi-white/100 group-hover:text-safi-white/100 transition-colors">{icon}</div>}
+        <div className={cn("text-[10px] uppercase font-bold tracking-widest", titleColors[variant])}>{title}</div>
+        {icon && <div className={variant === 'default' ? "text-safi-green/40 group-hover:text-safi-gold transition-colors" : "text-white/40"}>{icon}</div>}
       </div>
-      <div className="text-2xl md:text-3xl font-serif font-bold text-safi-white/100 relative z-10">{value}</div>
+      <div className={cn("text-2xl md:text-3xl font-serif font-bold relative z-10", valueColors[variant])}>{value}</div>
       {trend && (
-        <div className={cn("text-xs font-bold mt-2 relative z-10", trend.isPositive ? "text-green-500" : "text-red-500")}>
+        <div className={cn("text-xs font-bold mt-2 relative z-10", trend.isPositive ? (variant === 'default' ? "text-green-500" : "text-green-300") : (variant === 'default' ? "text-red-500" : "text-red-300"))}>
           {trend.isPositive ? '+' : ''}{trend.value}
         </div>
       )}
