@@ -20,7 +20,7 @@ export function StatCard({
         <div className="text-[10px] uppercase font-bold text-safi-text/60 tracking-widest">{title}</div>
         {icon && <div className="text-safi-white/100 group-hover:text-safi-white/100 transition-colors">{icon}</div>}
       </div>
-      <div className="text-2xl md:text-3xl font-serif font-bold text-safi-green relative z-10">{value}</div>
+      <div className="text-2xl md:text-3xl font-serif font-bold text-safi-white/100 relative z-10">{value}</div>
       {trend && (
         <div className={cn("text-xs font-bold mt-2 relative z-10", trend.isPositive ? "text-green-500" : "text-red-500")}>
           {trend.isPositive ? '+' : ''}{trend.value}
