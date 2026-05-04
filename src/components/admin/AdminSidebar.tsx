@@ -2,7 +2,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { cn } from '../../lib/utils';
 import { 
   BarChart, Users, Network, CreditCard, ArrowUpCircle, Gift, 
-  Package, Trophy, ShoppingBag, MessageSquare, PieChart, Settings, LogOut 
+  Package, Trophy, ShoppingBag, MessageSquare, PieChart, Settings, LogOut, Newspaper 
 } from 'lucide-react';
 
 const menuItems = [
@@ -15,6 +15,7 @@ const menuItems = [
   { path: '/admin/packages', name: 'Пакеты', icon: Package },
   { path: '/admin/statuses', name: 'Статусы', icon: Trophy },
   { path: '/admin/products', name: 'Продукты', icon: ShoppingBag },
+  { path: '/admin/news', name: 'Новости', icon: Newspaper },
   { path: '/admin/support', name: 'Поддержка', icon: MessageSquare },
   { path: '/admin/reports', name: 'Отчёты', icon: PieChart },
   { path: '/admin/settings', name: 'Настройки', icon: Settings },

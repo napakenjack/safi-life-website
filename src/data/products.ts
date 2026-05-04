@@ -37,7 +37,7 @@ export const products: Product[] = [
     usage: '1 мерную ложку порошка развести в стакане воды. Принимать утром натощак.',
     price: 18000,
     pv: 30,
-    image: 'https://images.unsplash.com/photo-1627467959081-97831c0d645f?q=80&w=1383&auto=format&fit=crop'
+    image: 'https://images.unsplash.com/photo-1629363447953-294b41a7cbe5?auto=format&fit=crop&q=80&w=400&h=400'
   },
   {
     id: '3',
@@ -102,7 +102,7 @@ export const products: Product[] = [
     usage: 'Развести 1 колпачок средства в 5 литрах воды для мытья полов или распылять на поверхности в неразбавленном виде для сильных загрязнений.',
     price: 5500,
     pv: 8,
-    image: 'https://images.unsplash.com/photo-1765516976457-550bd5f6f708?q=80&w=1100&auto=format&fit=crop'
+    image: 'https://images.unsplash.com/photo-1584820927498-cafe2c0c969b?auto=format&fit=crop&q=80&w=400&h=400'
   },
   {
     id: '8',
@@ -115,6 +115,6 @@ export const products: Product[] = [
     usage: 'По 1 капсуле за 30-40 минут до сна.',
     price: 8500,
     pv: 12,
-    image: 'https://images.unsplash.com/photo-1729622377484-3a454954624a?q=80&w=687&auto=format&fit=crop'
+    image: 'https://images.unsplash.com/photo-1512438258414-269cde732560?auto=format&fit=crop&q=80&w=400&h=400'
   }
 ];

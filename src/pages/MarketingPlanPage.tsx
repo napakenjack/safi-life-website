@@ -126,7 +126,6 @@ export default function MarketingPlanPage() {
                 <tr>
                   <th className="p-6 border-b border-safi-green/5">Статус</th>
                   <th className="p-6 border-b border-safi-green/5">Накоплено PV</th>
-                  <th className="p-6 border-b border-safi-green/5">Потенциальный доход</th>
                   <th className="p-6 border-b border-safi-green/5">Вознаграждение</th>
                 </tr>
               </thead>
@@ -135,7 +134,6 @@ export default function MarketingPlanPage() {
                   <tr key={s.id} className="hover:bg-[#F5F5F0] transition-colors">
                     <td className="p-6 font-bold text-safi-green">{s.name}</td>
                     <td className="p-6 text-safi-text opacity-70 font-medium">{s.pv.toLocaleString()} PV</td>
-                    <td className="p-6 text-safi-text opacity-70 font-medium">{s.incomePotential.toLocaleString('ru-RU')} ₸</td>
                     <td className="p-6 text-safi-gold font-bold">{s.reward}</td>
                   </tr>
                 ))}

@@ -61,6 +61,7 @@ export const packages: Package[] = [
     referralBonus: 10,
     binaryBonus: 10,
     features: [
+      'Статусный бонус',
       'Максимальный бинарный бонус 10%',
       'Bonus X2 доступен',
       'VIP обучение и поддержка',

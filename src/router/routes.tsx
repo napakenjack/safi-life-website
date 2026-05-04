@@ -10,6 +10,7 @@ const ProductsPage = React.lazy(() => import('../pages/ProductsPage'));
 const BusinessPage = React.lazy(() => import('../pages/BusinessPage'));
 const MarketingPlanPage = React.lazy(() => import('../pages/MarketingPlanPage'));
 const HowToStartPage = React.lazy(() => import('../pages/HowToStartPage'));
+const NewsPage = React.lazy(() => import('../pages/NewsPage'));
 const ContactsPage = React.lazy(() => import('../pages/ContactsPage'));
 const FAQPage = React.lazy(() => import('../pages/FAQPage'));
 const RegisterPage = React.lazy(() => import('../pages/RegisterPage'));
@@ -25,6 +26,8 @@ const Bonuses = React.lazy(() => import('../pages/dashboard/Bonuses'));
 const PackageStatus = React.lazy(() => import('../pages/dashboard/PackageStatus'));
 const Profile = React.lazy(() => import('../pages/dashboard/Profile'));
 const Support = React.lazy(() => import('../pages/dashboard/Support'));
+const Products = React.lazy(() => import('../pages/dashboard/Products'));
+const News = React.lazy(() => import('../pages/dashboard/News'));
 
 // Admin Pages
 const AdminOverview = React.lazy(() => import('../pages/admin/AdminOverview'));
@@ -40,6 +43,7 @@ const AdminProducts = React.lazy(() => import('../pages/admin/AdminProducts'));
 const AdminSupport = React.lazy(() => import('../pages/admin/AdminSupport'));
 const AdminReports = React.lazy(() => import('../pages/admin/AdminReports'));
 const AdminSettings = React.lazy(() => import('../pages/admin/AdminSettings'));
+const AdminNews = React.lazy(() => import('../pages/admin/AdminNews'));
 const AdminLayoutComponent = React.lazy(() => import('../components/admin/AdminLayout').then(module => ({ default: module.AdminLayout })));
 
 export function AppRouter() {
@@ -54,6 +58,7 @@ export function AppRouter() {
             <Route path="business" element={<BusinessPage />} />
             <Route path="marketing" element={<MarketingPlanPage />} />
             <Route path="how-to-start" element={<HowToStartPage />} />
+            <Route path="news" element={<NewsPage />} />
             <Route path="faq" element={<FAQPage />} />
             <Route path="contacts" element={<ContactsPage />} />
             <Route path="register" element={<RegisterPage />} />
@@ -68,6 +73,8 @@ export function AppRouter() {
             <Route path="transactions" element={<Transactions />} />
             <Route path="bonuses" element={<Bonuses />} />
             <Route path="package-status" element={<PackageStatus />} />
+            <Route path="products" element={<Products />} />
+            <Route path="news" element={<News />} />
             <Route path="profile" element={<Profile />} />
             <Route path="support" element={<Support />} />
           </Route>
@@ -84,6 +91,7 @@ export function AppRouter() {
             <Route path="packages" element={<AdminPackages />} />
             <Route path="statuses" element={<AdminStatuses />} />
             <Route path="products" element={<AdminProducts />} />
+            <Route path="news" element={<AdminNews />} />
             <Route path="support" element={<AdminSupport />} />
             <Route path="reports" element={<AdminReports />} />
             <Route path="settings" element={<AdminSettings />} />

@@ -22,13 +22,12 @@ export default function AdminStatuses() {
         </div>
       </div>
 
-      <AdminTable headers={['Статус', 'Условия (PV / Оборот)', 'Премия / Подарок', 'Партнёров на статусе', 'Действия']}>
+      <AdminTable headers={['Статус', 'Условия (PV)', 'Премия / Подарок', 'Партнёров на статусе', 'Действия']}>
         {statuses.map((s, i) => (
           <tr key={i} className="hover:bg-safi-green/5 transition-colors group">
              <td className="px-6 py-4 font-bold text-safi-green text-sm">{s.name}</td>
              <td className="px-6 py-4">
                <div className="text-sm font-bold">{s.pv} PV</div>
-               <div className="text-xs text-safi-text/60 mt-0.5">{s.volume}</div>
              </td>
              <td className="px-6 py-4 font-bold max-w-[200px] truncate">{s.reward}</td>
              <td className="px-6 py-4"><AdminBadge variant="default">{s.count}</AdminBadge></td>

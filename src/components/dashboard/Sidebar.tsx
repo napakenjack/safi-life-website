@@ -1,6 +1,6 @@
 import { Link, useLocation } from 'react-router-dom';
 import { cn } from '../../lib/utils';
-import { LayoutDashboard, Users, CreditCard, Gift, Star, UserCircle, HelpCircle, LogOut } from 'lucide-react';
+import { LayoutDashboard, Users, CreditCard, Gift, Star, UserCircle, HelpCircle, LogOut, ShoppingBag, Newspaper } from 'lucide-react';
 
 const menuItems = [
   { path: '/dashboard', name: 'Обзор', icon: LayoutDashboard },
@@ -8,6 +8,8 @@ const menuItems = [
   { path: '/dashboard/transactions', name: 'Транзакции', icon: CreditCard },
   { path: '/dashboard/bonuses', name: 'Бонусы и Вывод', icon: Gift },
   { path: '/dashboard/package-status', name: 'Пакет и Статус', icon: Star },
+  { path: '/dashboard/products', name: 'Магазин', icon: ShoppingBag },
+  { path: '/dashboard/news', name: 'Новости', icon: Newspaper },
   { path: '/dashboard/profile', name: 'Профиль', icon: UserCircle },
   { path: '/dashboard/support', name: 'Поддержка', icon: HelpCircle },
 ];

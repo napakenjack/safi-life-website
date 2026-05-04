@@ -31,7 +31,7 @@ export default function Overview() {
           title="Доступно к выводу" 
           value={`${balance.available.toLocaleString('ru-RU')} ₸`} 
           icon={<ArrowUpRight className="w-5 h-5" />}
-          className="bg-safi-gold text-white border-none shadow-lg"
+          className="bg-safi-green text-white border-none shadow-lg"
         />
         <StatCard 
           title="Общий заработок" 
@@ -92,14 +92,36 @@ export default function Overview() {
                 <ActionBtn icon={<HelpCircle />} label="Поддержка" />
               </div>
               
-              {/* Ref Link */}
-              <div className="mt-8 p-4 bg-[#F5F5F0] rounded-2xl border border-safi-green/10 flex flex-col sm:flex-row items-center justify-between gap-4">
-                 <div>
-                   <div className="text-[10px] uppercase font-bold text-safi-text/50 tracking-widest mb-1">Ваша реферальная ссылка</div>
-                   <div className="font-mono text-sm text-safi-green">https://safilife.kz/register?ref={user.referralCode}</div>
+              {/* Ref Links */}
+              <div className="mt-8 grid grid-cols-1 xl:grid-cols-2 gap-4">
+                 <div className="p-4 bg-[#F5F5F0] rounded-2xl border border-safi-green/10 flex flex-col justify-between gap-3 relative group">
+                   <div>
+                     <div className="text-[10px] uppercase font-bold text-safi-text/50 tracking-widest mb-1 flex items-center justify-between">
+                       <span>Ветка (Левая)</span>
+                       <span className="w-2 h-2 rounded-full bg-red-400"></span>
+                     </div>
+                     <div className="font-mono text-xs md:text-sm text-safi-green truncate pr-8">
+                       https://safilife.kz/register?ref={user.referralCode}&leg=left
+                     </div>
+                   </div>
+                   <button className="absolute right-4 top-1/2 -translate-y-1/2 p-2 hover:bg-white rounded-xl transition-colors text-safi-green border border-transparent hover:border-safi-green/10">
+                     <Copy className="w-4 h-4" />
+                   </button>
                  </div>
-                 <div className="flex gap-2">
-                   <button className="px-4 py-2 bg-white rounded-xl text-xs font-bold text-safi-green border border-safi-green/10 hover:bg-safi-green hover:text-white transition-colors">Копировать</button>
+
+                 <div className="p-4 bg-[#F5F5F0] rounded-2xl border border-safi-green/10 flex flex-col justify-between gap-3 relative group">
+                   <div>
+                     <div className="text-[10px] uppercase font-bold text-safi-text/50 tracking-widest mb-1 flex items-center justify-between">
+                       <span>Ветка (Правая)</span>
+                       <span className="w-2 h-2 rounded-full bg-safi-gold"></span>
+                     </div>
+                     <div className="font-mono text-xs md:text-sm text-safi-green truncate pr-8">
+                       https://safilife.kz/register?ref={user.referralCode}&leg=right
+                     </div>
+                   </div>
+                   <button className="absolute right-4 top-1/2 -translate-y-1/2 p-2 hover:bg-white rounded-xl transition-colors text-safi-green border border-transparent hover:border-safi-green/10">
+                     <Copy className="w-4 h-4" />
+                   </button>
                  </div>
               </div>
            </div>

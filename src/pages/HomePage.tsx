@@ -1,9 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Container } from '../components/ui/Container';
 import { Button } from '../components/ui/Button';
 import { ArrowRight, Leaf, ShieldCheck, Wallet, RefreshCw, Layers, TrendingUp } from 'lucide-react';
 import { products } from '../data/products';
 import { packages } from '../data/packages';
+import { newsArticles } from '../data/news';
 
 export default function HomePage() {
   return (
@@ -99,6 +101,37 @@ export default function HomePage() {
                 </div>
               </div>
             </div>
+          </div>
+        </Container>
+      </section>
+
+      {/* Mini News Feed */}
+      <section className="py-6 bg-white border-b border-safi-green/5">
+        <Container>
+          <div className="flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-8">
+             <div className="shrink-0 flex items-center gap-2 text-safi-gold">
+               <span className="w-2 h-2 rounded-full bg-safi-gold animate-pulse"></span>
+               <span className="text-[10px] font-bold uppercase tracking-widest text-safi-green">Новости</span>
+             </div>
+             
+             <div className="flex-1 overflow-hidden">
+                <div className="flex gap-6 overflow-x-auto pb-2 -mb-2 scrollbar-none snap-x">
+                   {newsArticles.slice(0, 3).map(article => (
+                     <Link to="/news" key={article.id} className="shrink-0 snap-start bg-[#F5F5F0] border border-safi-green/5 rounded-xl p-4 w-[280px] hover:bg-safi-green/5 transition-colors cursor-pointer flex flex-col justify-between group">
+                       <div className="text-[10px] text-safi-text/50 mb-2 font-mono flex items-center justify-between">
+                         <span className="bg-white px-2 py-0.5 rounded-full text-safi-green font-bold">{article.category}</span>
+                         <span>{article.date}</span>
+                       </div>
+                       <h4 className="text-sm font-bold text-safi-green line-clamp-2 leading-tight group-hover:text-safi-gold transition-colors">{article.title}</h4>
+                     </Link>
+                   ))}
+                </div>
+             </div>
+             <div className="shrink-0">
+               <Link to="/news" className="text-xs uppercase tracking-widest font-bold text-safi-gold hover:text-safi-green transition-colors flex items-center gap-1">
+                 Смотреть всё <ArrowRight className="w-3 h-3" />
+               </Link>
+             </div>
           </div>
         </Container>
       </section>
