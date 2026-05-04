@@ -33,8 +33,9 @@ export function Footer() {
           <div>
             <h3 className="text-safi-gold font-bold uppercase tracking-widest text-xs mb-6">Компания</h3>
             <ul className="space-y-3 text-sm">
-              <li><Link to="/about" className="text-safi-bg/70 hover:text-white transition-colors">О нас</Link></li>
+              <li><Link to="/about" className="text-safi-bg/70 hover:text-white transition-colors">{t('nav.about', 'О нас')}</Link></li>
               <li><Link to="/products" className="text-safi-bg/70 hover:text-white transition-colors">{t('nav.products', 'Продукты')}</Link></li>
+              <li><Link to="/faq" className="text-safi-bg/70 hover:text-white transition-colors">{t('nav.faq', 'FAQ')}</Link></li>
               <li><Link to="/contacts" className="text-safi-bg/70 hover:text-white transition-colors">{t('nav.contacts', 'Контакты')}</Link></li>
               <li><Link to="/legal" className="text-safi-bg/70 hover:text-white transition-colors">Правовая информация</Link></li>
             </ul>

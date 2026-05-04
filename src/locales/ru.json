@@ -1,12 +1,15 @@
 {
   "nav": {
     "products": "Продукция",
-    "business": "Бизнес",
+    "business": "Возможности",
     "marketing": "Маркетинг план",
     "howToStart": "Как начать",
     "contacts": "Контакты",
     "login": "Войти",
-    "register": "Регистрация"
+    "register": "Регистрация",
+    "home": "Главная",
+    "about": "О компании",
+    "faq": "FAQ"
   },
   "hero": {
     "title1": "Раскрой свой",
