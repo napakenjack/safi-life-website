@@ -11,7 +11,7 @@ export interface Package {
 export const packages: Package[] = [
   {
     id: 'business',
-    name: 'Start',
+    name: 'START',
     price: 60000,
     referralBonus: 10,
     binaryBonus: 7,
