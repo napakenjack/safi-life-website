@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Container } from '../components/ui/Container';
 import { SectionTitle } from '../components/ui/SectionTitle';
 import { Button } from '../components/ui/Button';
@@ -6,6 +7,7 @@ import { products, Product } from '../data/products';
 import { X, Check } from 'lucide-react';
 
 export default function ProductsPage() {
+  const { t } = useTranslation();
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
 
   return (
@@ -14,8 +16,8 @@ export default function ProductsPage() {
 
       <Container className="relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-serif font-bold text-safi-green mb-4">Каталог <span className="italic text-safi-gold">продукции</span></h2>
-          <p className="text-safi-text opacity-70 max-w-2xl mx-auto uppercase tracking-wider text-xs font-bold">Здоровье, красота и ежедневное использование</p>
+          <h2 className="text-4xl md:text-5xl font-serif font-bold text-safi-green mb-4">{t('productsPage.title1', 'Каталог')} <span className="italic text-safi-gold">{t('productsPage.title2', 'продукции')}</span></h2>
+          <p className="text-safi-text opacity-70 max-w-2xl mx-auto uppercase tracking-wider text-xs font-bold">{t('productsPage.subtitle', 'Здоровье, красота и ежедневное использование')}</p>
         </div>
         
         <div className="flex gap-4 mb-10 overflow-x-auto pb-4 hide-scrollbar">
@@ -41,8 +43,8 @@ export default function ProductsPage() {
                 <p className="text-safi-text opacity-70 text-sm mb-6 flex-1 leading-relaxed">{product.shortDescription}</p>
                 <div className="text-3xl font-serif font-bold text-safi-green mb-6">{product.price.toLocaleString('ru-RU')} ₸</div>
                 <div className="flex flex-col gap-3">
-                  <Button className="w-full">Заказать</Button>
-                  <Button variant="outline" className="w-full" onClick={() => setSelectedProduct(product)}>Подробнее</Button>
+                  <Button className="w-full">{t('productsPage.orderBtn', 'Заказать')}</Button>
+                  <Button variant="outline" className="w-full" onClick={() => setSelectedProduct(product)}>{t('productsPage.moreBtn', 'Подробнее')}</Button>
                 </div>
               </div>
             </div>
@@ -75,12 +77,12 @@ export default function ProductsPage() {
                 
                 <div className="space-y-8 flex-1">
                   <div>
-                    <h4 className="text-[10px] uppercase font-bold text-safi-green tracking-widest opacity-80 mb-3 border-b border-safi-green/10 pb-2">Описание</h4>
+                    <h4 className="text-[10px] uppercase font-bold text-safi-green tracking-widest opacity-80 mb-3 border-b border-safi-green/10 pb-2">{t('productsPage.descLabel', 'Описание')}</h4>
                     <p className="text-sm text-safi-text leading-relaxed opacity-80">{selectedProduct.description}</p>
                   </div>
                   
                   <div>
-                    <h4 className="text-[10px] uppercase font-bold text-safi-green tracking-widest opacity-80 mb-3 border-b border-safi-green/10 pb-2">Преимущества</h4>
+                    <h4 className="text-[10px] uppercase font-bold text-safi-green tracking-widest opacity-80 mb-3 border-b border-safi-green/10 pb-2">{t('productsPage.benefitsLabel', 'Преимущества')}</h4>
                     <ul className="space-y-2">
                        {selectedProduct.benefits.map((benefit, i) => (
                          <li key={i} className="flex items-start gap-3 text-sm text-safi-text opacity-80">
@@ -92,18 +94,18 @@ export default function ProductsPage() {
                   </div>
 
                   <div>
-                    <h4 className="text-[10px] uppercase font-bold text-safi-green tracking-widest opacity-80 mb-3 border-b border-safi-green/10 pb-2">Состав</h4>
+                    <h4 className="text-[10px] uppercase font-bold text-safi-green tracking-widest opacity-80 mb-3 border-b border-safi-green/10 pb-2">{t('productsPage.compLabel', 'Состав')}</h4>
                     <p className="text-sm text-safi-text leading-relaxed opacity-80">{selectedProduct.composition.join(', ')}</p>
                   </div>
 
                   <div>
-                    <h4 className="text-[10px] uppercase font-bold text-safi-green tracking-widest opacity-80 mb-3 border-b border-safi-green/10 pb-2">Способ применения</h4>
+                    <h4 className="text-[10px] uppercase font-bold text-safi-green tracking-widest opacity-80 mb-3 border-b border-safi-green/10 pb-2">{t('productsPage.usageLabel', 'Способ применения')}</h4>
                     <p className="text-sm text-safi-text leading-relaxed opacity-80">{selectedProduct.usage}</p>
                   </div>
                 </div>
 
                 <div className="pt-8 mt-8 border-t border-safi-green/5">
-                  <Button size="lg" className="w-full">Добавить в корзину</Button>
+                  <Button size="lg" className="w-full">{t('productsPage.addCartBtn', 'Добавить в корзину')}</Button>
                 </div>
               </div>
             </div>

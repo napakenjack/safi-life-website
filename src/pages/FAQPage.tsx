@@ -1,17 +1,19 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { Container } from '../components/ui/Container';
 import { SectionTitle } from '../components/ui/SectionTitle';
 import { faq } from '../data/faq';
 import { ChevronDown } from 'lucide-react';
 
 export default function FAQPage() {
+  const { t } = useTranslation();
   return (
     <div className="py-20 bg-safi-bg min-h-screen relative overflow-hidden">
       <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-safi-green/5 rounded-full blur-3xl -translate-y-1/2 -translate-x-1/4 pointer-events-none"></div>
 
       <Container className="relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-serif font-bold text-safi-green mb-4">Часто задаваемые <span className="italic text-safi-gold">вопросы</span></h2>
+          <h2 className="text-4xl md:text-5xl font-serif font-bold text-safi-green mb-4">Часто задаваемые <span className="italic text-safi-gold">{t('faq.title2', 'вопросы')}</span></h2>
           <p className="text-safi-text opacity-70 max-w-2xl mx-auto uppercase tracking-wider text-xs font-bold">Ответы на главные вопросы о компании, продуктах и партнерстве.</p>
         </div>
         

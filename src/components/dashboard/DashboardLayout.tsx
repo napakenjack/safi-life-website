@@ -3,6 +3,7 @@ import { Outlet } from 'react-router-dom';
 import { Sidebar } from './Sidebar';
 import { Menu, Bell, Search } from 'lucide-react';
 import { user } from '../../data/dashboardMock';
+import { LanguageSwitcher } from '../ui/LanguageSwitcher';
 
 export function DashboardLayout() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -21,18 +22,16 @@ export function DashboardLayout() {
             >
               <Menu className="w-6 h-6" />
             </button>
-            <div className="hidden md:flex items-center relative">
-               <Search className="w-4 h-4 text-safi-text/40 absolute left-3" />
-               <input 
-                 type="text" 
-                 placeholder="Поиск..." 
-                 className="pl-10 pr-4 py-2 bg-[#F5F5F0] border-none rounded-full text-sm w-64 focus:ring-2 focus:ring-safi-green/20 outline-none text-safi-green font-medium placeholder:text-safi-text/40"
-               />
+            <div className="hidden lg:block">
+              <LanguageSwitcher />
             </div>
           </div>
 
           <div className="flex items-center gap-4">
-            <button className="w-10 h-10 rounded-full bg-[#F5F5F0] flex items-center justify-center text-safi-green hover:bg-safi-green hover:text-safi-gold transition-colors relative">
+            <div className="lg:hidden">
+              <LanguageSwitcher />
+            </div>
+            <button className="hidden sm:flex w-10 h-10 rounded-full bg-[#F5F5F0] items-center justify-center text-safi-green hover:bg-safi-green hover:text-safi-gold transition-colors relative">
               <Bell className="w-5 h-5" />
               <span className="absolute top-0 right-0 w-3 h-3 bg-red-500 rounded-full border-2 border-white"></span>
             </button>

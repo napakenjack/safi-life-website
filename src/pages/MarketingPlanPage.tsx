@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Container } from '../components/ui/Container';
 import { SectionTitle } from '../components/ui/SectionTitle';
 import { statuses } from '../data/statuses';
 import { packages } from '../data/packages';
 
 export default function MarketingPlanPage() {
+  const { t } = useTranslation();
   const [selectedPackage, setSelectedPackage] = useState(packages[1].id);
   const [personalSales, setPersonalSales] = useState(100000);
   const [leftVol, setLeftVol] = useState(500000);
@@ -21,7 +23,7 @@ export default function MarketingPlanPage() {
     <div className="py-20 bg-gray-50">
       <Container>
         <SectionTitle 
-          title="Маркетинг-план Safi Life" 
+          title={`${t('marketing.title1', 'Маркетинг')}-${t('marketing.title2', 'план')} Safi Life`} 
           subtitle="Бинар + Классика"
         />
 
@@ -29,12 +31,12 @@ export default function MarketingPlanPage() {
           <h3 className="text-4xl font-serif text-safi-green mb-8 text-center"><span className="italic text-safi-gold">Виды</span> бонусов</h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              { title: 'Реферальный бонус (5-10%)', desc: 'Получайте бонус за личные рекомендации при покупке пакета новым партнёром.' },
-              { title: 'Бинарный бонус (7-10%)', desc: 'Начисляется с меньшей ветки вашей структуры при образовании бинарной пары.' },
+              { title: `${t('marketing.bonus1_title', 'Реферальный бонус')} (5-10%)`, desc: t('marketing.bonus1_desc', 'Получайте бонус за личные рекомендации при покупке пакета новым партнёром.') },
+              { title: `${t('marketing.bonus2_title', 'Бинарный бонус')} (7-10%)`, desc: t('marketing.bonus2_desc', 'Начисляется с меньшей ветки вашей структуры при образовании бинарной пары.') },
               { title: 'Статусный бонус', desc: 'Единоразовые премии и подарки за достижение определенных объемов PV.' },
               { title: 'Bonus X2', desc: 'Если партнеры первой линии достигают статусов, вы удваиваете свой успех.' },
               { title: 'Депозит 10%', desc: 'Часть бинарного бонуса сохраняется на балансе для будущих покупок.' },
-              { title: 'Классика (Кэшбэк 20%)', desc: 'Возврат средств за личные покупки продуктов из каталога.' }
+              { title: `Классика (${t('marketing.bonus4_title', 'Кэшбэк 20%')})`, desc: t('marketing.bonus4_desc', 'Возврат средств за личные покупки продуктов из каталога.') }
             ].map((item, i) => (
               <div key={i} className="bg-white p-8 rounded-[32px] shadow-sm border border-safi-green/5 hover:-translate-y-1 transition-transform duration-300">
                 <div className="w-12 h-12 rounded-2xl bg-[#F5F5F0] flex items-center justify-center text-safi-gold font-serif text-2xl font-bold mb-4">{i + 1}</div>
@@ -143,7 +145,7 @@ export default function MarketingPlanPage() {
         </div>
         
         <div className="text-center max-w-2xl mx-auto text-[10px] text-safi-text opacity-50 uppercase tracking-wider">
-          Все бонусы начисляются согласно действующему маркетинг-плану компании. Доход не гарантирован и зависит от активности партнёра, продаж, структуры и выполнения условий.
+          Все бонусы начисляются согласно действующему маркетинг-{t('marketing.title2', 'план')}у компании. Доход не гарантирован и зависит от активности партнёра, продаж, структуры и выполнения условий.
         </div>
       </Container>
     </div>

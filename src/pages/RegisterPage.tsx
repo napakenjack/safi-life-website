@@ -1,10 +1,12 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { Container } from '../components/ui/Container';
 import { Button } from '../components/ui/Button';
 import { Link } from 'react-router-dom';
 import { packages } from '../data/packages';
 
 export default function RegisterPage() {
+  const { t } = useTranslation();
   return (
     <div className="py-20 bg-safi-bg min-h-[calc(100vh-80px)] flex flex-col justify-center relative overflow-hidden">
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-safi-green/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/4 pointer-events-none"></div>
@@ -73,7 +75,7 @@ export default function RegisterPage() {
             </div>
             
             <div className="pt-4">
-              <Button type="button" to="/dashboard" className="w-full">Зарегистрироваться (Демо)</Button>
+              <Button type="button" to="/dashboard" className="w-full">{t('auth.regAction', 'Зарегистрироваться')} (Демо)</Button>
             </div>
             
             <p className="text-[10px] text-center text-safi-gold mt-2 uppercase tracking-widest font-bold">
@@ -81,7 +83,7 @@ export default function RegisterPage() {
             </p>
             
             <div className="text-center text-[10px] uppercase tracking-widest text-safi-text opacity-70 pt-4">
-              Уже есть аккаунт? <Link to="/login" className="text-safi-green font-bold hover:underline">Войти</Link>
+              Уже есть {t('auth.regAccount', 'аккаунт')}? <Link to="/login" className="text-safi-green font-bold hover:underline">Войти</Link>
             </div>
           </form>
         </div>

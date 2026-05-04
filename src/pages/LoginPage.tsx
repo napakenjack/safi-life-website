@@ -1,9 +1,11 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { Container } from '../components/ui/Container';
 import { Button } from '../components/ui/Button';
 import { Link } from 'react-router-dom';
 
 export default function LoginPage() {
+  const { t } = useTranslation();
   return (
     <div className="py-20 bg-safi-bg min-h-[calc(100vh-80px)] flex flex-col justify-center relative overflow-hidden">
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-safi-green/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/4 pointer-events-none"></div>
@@ -14,7 +16,7 @@ export default function LoginPage() {
           <div className="absolute top-0 right-0 w-32 h-32 bg-safi-gold/10 rounded-bl-full -z-10"></div>
           
           <div className="text-center mb-10">
-            <h1 className="text-3xl font-serif text-safi-green mb-2">Вход в кабинет</h1>
+            <h1 className="text-3xl font-serif text-safi-green mb-2">{t('auth.loginTitle', 'Вход в')} кабинет</h1>
             <p className="text-sm text-safi-text opacity-70">С возвращением в Safi Life</p>
           </div>
           
@@ -33,7 +35,7 @@ export default function LoginPage() {
             </div>
             
             <div className="pt-2">
-              <Button type="button" to="/dashboard" className="w-full">Войти (Демо)</Button>
+              <Button type="button" to="/dashboard" className="w-full">{t('auth.loginAction', 'Войти')} (Демо)</Button>
             </div>
             
             <div className="text-center text-[10px] uppercase tracking-widest text-safi-text opacity-70 pt-4">

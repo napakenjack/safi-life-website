@@ -1,17 +1,19 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { Container } from '../components/ui/Container';
 import { SectionTitle } from '../components/ui/SectionTitle';
 import { Button } from '../components/ui/Button';
 
 export default function HowToStartPage() {
+  const { t } = useTranslation();
   const steps = [
-    { title: 'Оставьте заявку или зарегистрируйтесь', desc: 'Воспользуйтесь реферальной ссылкой или заполните форму.' },
-    { title: 'Выберите стартовый пакет', desc: 'Определитесь между START, BUSINESS, VIP или ELITE.' },
-    { title: 'Доступ к кабинету', desc: 'Получите доступ к панели управления и обучению.' },
-    { title: 'Пройдите обучение', desc: 'Изучите продукты компании и материалы для партнёров.' },
-    { title: 'Начните продажи и приглашения', desc: 'Зарабатывайте реферальные и классические бонусы.' },
-    { title: 'Развивайте бинар', desc: 'Стройте левую и правую ветки для получения 7-10% с меньшей ветки.' },
-    { title: 'Достигайте статусов', desc: 'Получайте премии и отслеживайте рост команды.' },
+    { title: t('howToStart.steps.0.title', 'Оставьте заявку или зарегистрируйтесь'), desc: t('howToStart.steps.0.desc', 'Воспользуйтесь реферальной ссылкой или заполните форму.') },
+    { title: t('howToStart.steps.1.title', 'Выберите стартовый пакет'), desc: t('howToStart.steps.1.desc', 'Определитесь между START, BUSINESS, VIP или ELITE.') },
+    { title: t('howToStart.steps.2.title', 'Доступ к кабинету'), desc: t('howToStart.steps.2.desc', 'Получите доступ к панели управления и обучению.') },
+    { title: t('howToStart.steps.3.title', 'Пройдите обучение'), desc: t('howToStart.steps.3.desc', 'Изучите продукты компании и материалы для партнёров.') },
+    { title: t('howToStart.steps.4.title', 'Начните продажи и приглашения'), desc: t('howToStart.steps.4.desc', 'Зарабатывайте реферальные и классические бонусы.') },
+    { title: t('howToStart.steps.5.title', 'Развивайте бинар'), desc: t('howToStart.steps.5.desc', 'Стройте левую и правую ветки для получения 7-10% с меньшей ветки.') },
+    { title: t('howToStart.steps.6.title', 'Достигайте статусов'), desc: t('howToStart.steps.6.desc', 'Получайте премии и отслеживайте рост команды.') },
   ];
 
   return (
@@ -20,8 +22,8 @@ export default function HowToStartPage() {
 
       <Container className="relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-serif font-bold text-safi-green mb-4">С чего <span className="italic text-safi-gold">начать</span></h2>
-          <p className="text-safi-text opacity-70 max-w-2xl mx-auto uppercase tracking-wider text-xs font-bold">7 простых шагов к созданию бизнеса вместе с Safi Life</p>
+          <h2 className="text-4xl md:text-5xl font-serif font-bold text-safi-green mb-4">{t('howToStart.pageTitle', 'С чего')} <span className="italic text-safi-gold">{t('howToStart.title2', 'начать')}</span></h2>
+          <p className="text-safi-text opacity-70 max-w-2xl mx-auto uppercase tracking-wider text-xs font-bold">{t('howToStart.pageSubtitle', '7 простых шагов к созданию бизнеса вместе с Safi Life')}</p>
         </div>
         
         <div className="max-w-3xl mx-auto space-y-6 mb-16">
@@ -39,7 +41,7 @@ export default function HowToStartPage() {
         </div>
         
         <div className="text-center">
-          <Button size="lg" to="/register">Начать с Safi Life</Button>
+          <Button size="lg" to="/register">{t('howToStart.startBtn', 'Начать с Safi Life')}</Button>
         </div>
       </Container>
     </div>

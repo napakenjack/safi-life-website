@@ -1,14 +1,16 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { Container } from '../components/ui/Container';
 
 export default function LegalPage() {
+  const { t } = useTranslation();
   return (
     <div className="py-20 bg-safi-bg min-h-screen relative overflow-hidden">
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-safi-green/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/4 pointer-events-none"></div>
 
       <Container className="relative z-10">
         <div className="max-w-3xl mx-auto bg-white p-8 md:p-12 rounded-[40px] shadow-sm border border-safi-green/5 text-safi-text">
-          <h1 className="text-3xl md:text-5xl font-serif font-bold text-safi-green mb-10 text-center">Правовая <span className="italic text-safi-gold">информация</span></h1>
+          <h1 className="text-3xl md:text-5xl font-serif font-bold text-safi-green mb-10 text-center">{t('legal.title1', 'Правовая')} <span className="italic text-safi-gold">{t('legal.title2', 'информация')}</span></h1>
           
           <div className="prose prose-safi max-w-none prose-headings:font-serif prose-headings:text-safi-green prose-p:opacity-80 prose-li:opacity-80">
             <p className="text-lg leading-relaxed text-center mb-10">

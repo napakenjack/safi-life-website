@@ -1,9 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { Container } from '../ui/Container';
 import { Leaf, Instagram, MessageCircle, Send } from 'lucide-react';
 
 export function Footer() {
+  const { t } = useTranslation();
+
   return (
     <footer className="bg-safi-green text-safi-bg py-16 relative overflow-hidden">
       <div className="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 pointer-events-none"></div>
@@ -31,8 +34,8 @@ export function Footer() {
             <h3 className="text-safi-gold font-bold uppercase tracking-widest text-xs mb-6">Компания</h3>
             <ul className="space-y-3 text-sm">
               <li><Link to="/about" className="text-safi-bg/70 hover:text-white transition-colors">О нас</Link></li>
-              <li><Link to="/products" className="text-safi-bg/70 hover:text-white transition-colors">Продукты</Link></li>
-              <li><Link to="/contacts" className="text-safi-bg/70 hover:text-white transition-colors">Контакты</Link></li>
+              <li><Link to="/products" className="text-safi-bg/70 hover:text-white transition-colors">{t('nav.products', 'Продукты')}</Link></li>
+              <li><Link to="/contacts" className="text-safi-bg/70 hover:text-white transition-colors">{t('nav.contacts', 'Контакты')}</Link></li>
               <li><Link to="/legal" className="text-safi-bg/70 hover:text-white transition-colors">Правовая информация</Link></li>
             </ul>
           </div>
@@ -40,10 +43,10 @@ export function Footer() {
           <div>
             <h3 className="text-safi-gold font-bold uppercase tracking-widest text-xs mb-6">Партнёрам</h3>
             <ul className="space-y-3 text-sm">
-              <li><Link to="/business" className="text-safi-bg/70 hover:text-white transition-colors">Бизнес-возможность</Link></li>
-              <li><Link to="/marketing" className="text-safi-bg/70 hover:text-white transition-colors">Маркетинг-план</Link></li>
-              <li><Link to="/how-to-start" className="text-safi-bg/70 hover:text-white transition-colors">Как начать</Link></li>
-              <li><Link to="/login" className="text-safi-bg/70 hover:text-white transition-colors">Вход в кабинет</Link></li>
+              <li><Link to="/business" className="text-safi-bg/70 hover:text-white transition-colors">{t('nav.business', 'Возможность')}</Link></li>
+              <li><Link to="/marketing" className="text-safi-bg/70 hover:text-white transition-colors">{t('nav.marketing', 'Маркетинг-план')}</Link></li>
+              <li><Link to="/how-to-start" className="text-safi-bg/70 hover:text-white transition-colors">{t('nav.howToStart', 'Как начать')}</Link></li>
+              <li><Link to="/login" className="text-safi-bg/70 hover:text-white transition-colors">{t('nav.login', 'Вход в кабинет')}</Link></li>
               <li><Link to="/dashboard" className="text-safi-gold hover:text-white transition-colors font-bold uppercase text-[10px] tracking-wider relative group">
                 <span className="bg-white/10 px-2 py-1 rounded inline-block">Демо кабинета</span>
               </Link></li>
@@ -51,7 +54,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h3 className="text-safi-gold font-bold uppercase tracking-widest text-xs mb-6">Контакты</h3>
+            <h3 className="text-safi-gold font-bold uppercase tracking-widest text-xs mb-6">{t('nav.contacts', 'Контакты')}</h3>
             <ul className="space-y-3 text-sm text-safi-bg/70">
               <li className="flex flex-col">
                 <span className="text-[10px] text-safi-gold uppercase tracking-wider mb-1">Офис</span>
@@ -67,7 +70,7 @@ export function Footer() {
         </div>
         
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-safi-bg/50">
-          <p>© {new Date().getFullYear()} Safi Life. Все права защищены.</p>
+          <p>© {new Date().getFullYear()} Safi Life. {t('footer.rights', 'Все права защищены.')}</p>
           <div className="mt-4 md:mt-0 max-w-xl text-center md:text-right">
             <p>Информация на сайте носит ознакомительный характер. Потенциальный доход не гарантируется.</p>
           </div>

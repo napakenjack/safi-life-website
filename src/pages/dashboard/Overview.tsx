@@ -1,3 +1,4 @@
+import React from 'react';
 import { user, balance, structure, transactions } from '../../data/dashboardMock';
 import { StatCard, ProgressBar, Badge } from '../../components/dashboard/ui';
 import { Copy, Plus, ArrowUpRight, ArrowUpCircle, HelpCircle, Users, Activity, ExternalLink } from 'lucide-react';

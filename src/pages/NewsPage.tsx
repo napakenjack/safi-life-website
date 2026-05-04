@@ -1,14 +1,16 @@
+import { useTranslation } from 'react-i18next';
 import { Container } from '../components/ui/Container';
 import { newsArticles } from '../data/news';
 import { Calendar } from 'lucide-react';
 
 export default function NewsPage() {
+  const { t } = useTranslation();
   return (
     <div className="bg-[#F5F5F0] min-h-screen py-24">
       <Container>
         <div className="max-w-4xl mx-auto space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
           <div className="text-center md:text-left mb-12">
-            <h1 className="text-4xl md:text-5xl font-serif font-bold text-safi-green mb-4">Новости компании</h1>
+            <h1 className="text-4xl md:text-5xl font-serif font-bold text-safi-green mb-4">{t('news.pageTitle', 'Новости компании')}</h1>
             <p className="text-lg text-safi-text/70 max-w-2xl">Будьте в курсе всех последних событий, обновлений и специальных предложений.</p>
           </div>
 

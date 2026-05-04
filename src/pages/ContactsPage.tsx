@@ -1,8 +1,10 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { Container } from '../components/ui/Container';
 import { Button } from '../components/ui/Button';
 
 export default function ContactsPage() {
+  const { t } = useTranslation();
   return (
     <div className="py-20 bg-safi-bg min-h-[calc(100vh-80px)] relative overflow-hidden flex flex-col justify-center">
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-safi-green/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/4 pointer-events-none"></div>
@@ -11,7 +13,7 @@ export default function ContactsPage() {
         <div className="grid md:grid-cols-2 gap-16 max-w-6xl mx-auto items-center">
           <div>
             <h1 className="text-4xl md:text-6xl font-serif font-bold mb-6 text-safi-green">Контакты</h1>
-            <p className="text-safi-text opacity-70 mb-10 text-lg leading-relaxed">Свяжитесь с нами для получения консультации по продуктам или вопросам партнерства.</p>
+            <p className="text-safi-text opacity-70 mb-10 text-lg leading-relaxed">{t('contacts.title1', 'Свяжитесь')} {t('contacts.title2', 'с нами')} для получения консультации по продуктам или вопросам партнерства.</p>
             
             <div className="space-y-8 relative">
               <div className="absolute left-0 top-0 bottom-0 w-px bg-safi-green/10"></div>
@@ -22,7 +24,7 @@ export default function ContactsPage() {
               </div>
               <div className="pl-6 relative">
                 <div className="absolute left-[-4px] top-2 w-2 h-2 rounded-full bg-safi-gold"></div>
-                <h4 className="text-[10px] uppercase font-bold text-safi-gold tracking-widest mb-1">Телефон</h4>
+                <h4 className="text-[10px] uppercase font-bold text-safi-gold tracking-widest mb-1">{t('contacts.formPhone', 'Телефон')}</h4>
                 <p className="text-safi-green font-serif text-xl font-bold">+7 (700) 000-00-00</p>
               </div>
               <div className="pl-6 relative">
@@ -39,7 +41,7 @@ export default function ContactsPage() {
             <form className="space-y-6" onSubmit={e => e.preventDefault()}>
               <div>
                 <label className="block text-[10px] uppercase tracking-widest font-bold text-safi-green opacity-80 mb-2">Имя</label>
-                <input type="text" className="w-full px-5 py-4 rounded-xl border border-safi-green/20 bg-[#F5F5F0] focus:ring-2 focus:ring-safi-green focus:border-safi-green focus:bg-white outline-none transition-all placeholder:text-safi-text/40" placeholder="Ваше имя" />
+                <input type="text" className="w-full px-5 py-4 rounded-xl border border-safi-green/20 bg-[#F5F5F0] focus:ring-2 focus:ring-safi-green focus:border-safi-green focus:bg-white outline-none transition-all placeholder:text-safi-text/40" placeholder={t('contacts.formName', 'Ваше имя')} />
               </div>
               <div>
                 <label className="block text-[10px] uppercase tracking-widest font-bold text-safi-green opacity-80 mb-2">Телефон</label>
