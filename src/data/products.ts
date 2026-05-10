@@ -102,7 +102,7 @@ export const products: Product[] = [
     usage: 'Развести 1 колпачок средства в 5 литрах воды для мытья полов или распылять на поверхности в неразбавленном виде для сильных загрязнений.',
     price: 5500,
     pv: 8,
-    image: 'https://images.unsplash.com/photo-1584820927498-cafe2c0c969b?auto=format&fit=crop&q=80&w=400&h=400'
+    image: 'https://images.unsplash.com/photo-1650472615219-fdf6f4320434?q=80&w=1470&auto=format&fit=crop'
   },
   {
     id: '8',
@@ -115,6 +115,6 @@ export const products: Product[] = [
     usage: 'По 1 капсуле за 30-40 минут до сна.',
     price: 8500,
     pv: 12,
-    image: 'https://images.unsplash.com/photo-1512438258414-269cde732560?auto=format&fit=crop&q=80&w=400&h=400'
+    image: 'https://images.unsplash.com/photo-1665757516783-36558f7ab5d2?q=80&w=1160&auto=format&fit=crop'
   }
 ];
