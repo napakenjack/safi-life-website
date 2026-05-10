@@ -102,7 +102,7 @@ export function Header() {
           <Link to="/" className="flex items-center" onClick={closeMenu}>
             <img 
               alt="Safi Life" 
-              className="w-[100px] h-[60px] object-contain shrink-0" 
+              className="w-[100px] h-[40px] object-contain shrink-0" 
               src="https://napaxiong.wordpress.com/wp-content/uploads/2026/04/safi-life.png" 
             />
           </Link>
